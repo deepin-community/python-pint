@@ -1,0 +1,61 @@
+Source: python-pint
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Thomas Goirand <zigo@debian.org>,
+           Ondřej Nový <onovy@debian.org>,
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-setuptools-scm,
+               python3-ipykernel,
+               python3-jupyter-client,
+               python3-sphinx,
+Build-Depends-Indep: pandoc,
+                     python3-matplotlib,
+                     python3-packaging,
+                     python3-pytest,
+                     python3-nbsphinx,
+                     python3-numpy,
+                     python3-yaml,
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-pint
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-pint.git
+Homepage: https://github.com/hgrecco/pint
+Testsuite: autopkgtest-pkg-python
+Rules-Requires-Root: no
+
+Package: python3-pint
+Architecture: all
+Depends: python3-pkg-resources,
+         ${misc:Depends},
+         ${python3:Depends},
+Description: define, operate and manipulate physical quantities - Python 3.x
+ Pint is Python module/package to define, operate and manipulate physical
+ quantities: the product of a numerical value and a unit of measurement. It
+ allows arithmetic operations between them and conversions from and to
+ different units.
+ .
+ It is distributed with a comprehensive list of physical units, prefixes and
+ constants. Due to its modular design, you can extend (or even rewrite!) the
+ complete list without changing the source code.
+ .
+ This package contains the Python 3.x module.
+
+Package: python-pint-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+Description: define, operate and manipulate physical quantities - doc
+ Pint is Python module/package to define, operate and manipulate physical
+ quantities: the product of a numerical value and a unit of measurement. It
+ allows arithmetic operations between them and conversions from and to
+ different units.
+ .
+ It is distributed with a comprehensive list of physical units, prefixes and
+ constants. Due to its modular design, you can extend (or even rewrite!) the
+ complete list without changing the source code.
+ .
+ This package contains the documentation.

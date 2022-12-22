@@ -1,0 +1,43 @@
+From a3679a536a318454dcf363eb22c7fe8d7a803890 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ond=C5=99ej=20Nov=C3=BD?= <ondrej.novy@firma.seznam.cz>
+Date: Mon, 11 Jul 2016 07:39:30 +0200
+Subject: use_looseversion
+
+commit 1dc2f5b5b131c1bf6c0e89fa28ba8a785a5865d3
+
+    Use LooseVersion for NumPy version comparing
+
+    Because NumPy is releasing version likes 1.11.1rc1, which is not
+    StrictVersion
+---
+ pint/testsuite/helpers.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+--- a/pint/testsuite/helpers.py
++++ b/pint/testsuite/helpers.py
+@@ -2,6 +2,7 @@
+ import re
+ import unittest
+ from distutils.version import StrictVersion
++from distutils.version import LooseVersion
+ 
+ from ..compat import (
+     HAS_BABEL,
+@@ -33,7 +34,7 @@
+     if not HAS_NUMPY:
+         return unittest.skip("Requires NumPy")
+     return unittest.skipUnless(
+-        StrictVersion(NUMPY_VER) < StrictVersion(version),
++        LooseVersion(NUMPY_VER) < LooseVersion(version),
+         "Requires NumPy < %s" % version,
+     )
+ 
+@@ -42,7 +43,7 @@
+     if not HAS_NUMPY:
+         return unittest.skip("Requires NumPy")
+     return unittest.skipUnless(
+-        StrictVersion(NUMPY_VER) >= StrictVersion(version),
++        LooseVersion(NUMPY_VER) >= LooseVersion(version),
+         "Requires NumPy >= %s" % version,
+     )
+ 

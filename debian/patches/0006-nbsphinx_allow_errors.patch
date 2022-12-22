@@ -1,0 +1,12 @@
+Author: Ondřej Nový <onovy@debian.org>
+Forwarded: not-needed
+Subject: Set nbsphinx_allow_errors to workaround docs building.
+
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -341,3 +341,5 @@
+     ]
+ }
+ """
++
++nbsphinx_allow_errors = True

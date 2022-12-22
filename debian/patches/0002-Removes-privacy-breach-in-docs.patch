@@ -1,0 +1,33 @@
+From 4074d18012a31daa22cf40c49bec700562e239e7 Mon Sep 17 00:00:00 2001
+From: Thomas Goirand <zigo@debian.org>
+Date: Fri, 4 Aug 2017 17:05:43 +0200
+Subject: Removes privacy breach in docs
+
+Forwarded: not-needed
+Last-Update: 2014-09-05
+---
+ docs/_themes/flask/layout.html | 2 +-
+ docs/conf.py                   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+--- a/docs/_themes/flask/layout.html
++++ b/docs/_themes/flask/layout.html
+@@ -10,7 +10,7 @@
+ {%- block relbar2 %}
+   {% if theme_github_fork %}
+     <a href="http://github.com/{{ theme_github_fork }}"><img style="position: fixed; top: 0; right: 0; border: 0;"
+-    src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
++    src="" alt="Fork me on GitHub" /></a>
+   {% endif %}
+ {% endblock %}
+ {% block header %}
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -38,7 +38,6 @@
+     "sphinx.ext.coverage",
+     "sphinx.ext.napoleon",
+     "sphinx.ext.viewcode",
+-    "sphinx.ext.mathjax",
+     "matplotlib.sphinxext.plot_directive",
+     "nbsphinx",
+ ]

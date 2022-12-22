@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=pint
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs -A AUTHORS
+
+override_dh_sphinxdoc:
+	PYTHONPATH=. python3 -m sphinx -b html docs debian/python-pint-doc/usr/share/doc/python-pint-doc/html
+	dh_sphinxdoc -O--buildsystem=python_distutils
+	rm $(CURDIR)/debian/python-pint-doc/usr/share/doc/python-pint-doc/html/_static/logo-full.jpg

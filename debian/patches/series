@@ -1,0 +1,6 @@
+0001-Do-not-use-intersphinx-when-building-docs.patch
+0002-Removes-privacy-breach-in-docs.patch
+0003-Skip-not-working-unit-tests.patch
+0004-Use-SOURCE_DATE_EPOCH-for-copyright-year-to-make-bui.patch
+0005-use_looseversion.patch
+0006-nbsphinx_allow_errors.patch

@@ -1,0 +1,21 @@
+From 1d8f235eefbc6076559a480408fa244d938deb98 Mon Sep 17 00:00:00 2001
+From: Thomas Goirand <zigo@debian.org>
+Date: Fri, 4 Aug 2017 17:05:42 +0200
+Subject: Do not use intersphinx when building docs
+
+Forwarded: not-needed
+Last-Update: 2014-09-05
+---
+ docs/conf.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -35,7 +35,6 @@
+     "sphinx.ext.autodoc",
+     "sphinx.ext.autosectionlabel",
+     "sphinx.ext.doctest",
+-    "sphinx.ext.intersphinx",
+     "sphinx.ext.coverage",
+     "sphinx.ext.napoleon",
+     "sphinx.ext.viewcode",
